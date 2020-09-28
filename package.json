@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/bhardwajhimanshu2515/todo-list-api#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.7",
     "mongoose-unique-validator": "^2.0.3"
