@@ -1,0 +1,19 @@
+{
+  "name": "blog-post-api",
+  "version": "1.0.0",
+  "description": "I am going to create a backend for Blog Post Web Application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhardwajhimanshu2515/todo-list-api.git"
+  },
+  "author": "Himanshu Bhardwaj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhardwajhimanshu2515/todo-list-api/issues"
+  },
+  "homepage": "https://github.com/bhardwajhimanshu2515/todo-list-api#readme"
+}
