@@ -64,7 +64,62 @@ const signup=async(req,res)=>{
         img:createdUser.img,
         name:createdUser.name,
         phoneNumber:createdUser.phoneNumber,
-        email:createdUser.email
+        email:createdUser.email,
+        token:token
     })
 };
 
+//create login function here
+const login=async(req,res)=>{
+    const {email,password}=req.body;
+    //check if user exists or not
+    let existinguser;
+    try{
+        existinguser=await User.findOne({email:email});
+    }catch(err){
+        const error=new HttpResponse("Error in checking existing user",500);
+        return res.status(500).json({response:error});
+    }
+    //if user not exist then throw an error that user does not exist.
+    if(!existinguser){
+        const error=new HttpResponse("User does not exist",401);
+        return res.status(401).json({response:error});
+    }
+    //if user exist that match password
+    let isValidPassword;
+    try{
+        isValidPassword=await bcrypt.compare(password,existinguser.password);
+    }catch(err){
+        const error=new HttpResponse("Error in matching Password",500);
+        return res.status(500).json({response:error});
+    }
+    //if not valid password then throw error
+    if(!isValidPassword){
+        const error=new HttpResponse("Credential did not matched",401);
+        return res.status(401).json({response:error});
+    }
+    //As user is valid now generate token
+    let token;
+    try{
+        token=jwt.sign({userId:existinguser.id,email:existinguser.email,userType:existinguser.userType},
+            "myToken",
+            {expiresin:'21d'});
+    }catch(err){
+        const error=new HttpResponse("Error in generating token",500);
+        return res.status(500).json({response:error});
+    }
+    //send response
+    res.status(200).json({
+        userId:existinguser.id,
+        img:existinguser.img,
+        name:existinguser.name,
+        phoneNumber:existinguser.phoneNumber,
+        email:existinguser.phoneNumber,
+        token:token
+    })
+};
+
+//export
+
+exports.signup=signup;
+exports.login=login;
