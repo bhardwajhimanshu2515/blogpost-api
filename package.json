@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/bhardwajhimanshu2515/todo-list-api/issues"
   },
-  "homepage": "https://github.com/bhardwajhimanshu2515/todo-list-api#readme"
+  "homepage": "https://github.com/bhardwajhimanshu2515/todo-list-api#readme",
+  "dependencies": {
+    "mongoose": "^5.10.7",
+    "mongoose-unique-validator": "^2.0.3"
+  }
 }
