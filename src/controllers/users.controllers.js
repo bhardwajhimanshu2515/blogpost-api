@@ -5,6 +5,7 @@ const jwt=require("jsonwebtoken");
 
 //import HttpResponse
 const HttpResponse=require("../models/http-response");
+const { create } = require("../models/user");
 
 //import userSchema
 const User=require("../models/user");
@@ -57,4 +58,13 @@ const signup=async(req,res)=>{
         const error=new HttpResponse("Error in token generation",500);
         return res.status(500).json({response:error});
     }
+    //return response
+    res.status(201).json({
+        userId:createdUser.id,
+        img:createdUser.img,
+        name:createdUser.name,
+        phoneNumber:createdUser.phoneNumber,
+        email:createdUser.email
+    })
 };
+
