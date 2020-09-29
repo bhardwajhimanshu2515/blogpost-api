@@ -5,7 +5,6 @@ const jwt=require("jsonwebtoken");
 
 //import HttpResponse
 const HttpResponse=require("../models/http-response");
-const { create } = require("../models/user");
 
 //import userSchema
 const User=require("../models/user");
