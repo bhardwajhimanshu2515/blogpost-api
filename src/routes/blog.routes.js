@@ -18,3 +18,6 @@ router.post("/create",blogController.createBlog);
 
 //define route for getting all blogs
 router.get("/getAll",blogController.getAllBlogs);
+
+//export router
+module.exports=router;
