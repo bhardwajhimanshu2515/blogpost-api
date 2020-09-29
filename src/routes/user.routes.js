@@ -2,12 +2,8 @@
 const express=require("express");
 const {check}=require("express-validator");
 
-//import checkToken too
-const checkToken=require("../middlewares/checkToken");
-
 //import userController
 const userController=require("../controllers/users.controllers");
-const user = require("../models/user");
 
 //crate a router
 const router=express.Router();
