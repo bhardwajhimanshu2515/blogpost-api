@@ -1,0 +1,31 @@
+POST http://localhost:5000/api/user/signup
+Content-Type: application/json
+
+{
+    "img":"https://google.com",
+    "name":"Himanshu Bhardwaj",
+    "phoneNumber":"98296485**",
+    "email":"bhardwajhimanshu2515@gmail.com",
+    "password":"HelloWorld"
+}
+
+###
+POST http://localhost:5000/api/user/login
+Content-Type: application/json
+
+{
+    "email":"bhardwajhimanshu2515@gmail.com",
+    "password":"HelloWorld"
+}
+
+###
+POST http://localhost:5000/api/blog/create
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1Zjc0NTQ1YWY0YmEyYTE3OTg3YWFmMzQiLCJlbWFpbCI6ImJoYXJkd2FqaGltYW5zaHUyNTE1QGdtYWlsLmNvbSIsImlhdCI6MTYwMTQ2MDA2NSwiZXhwIjoxNjAzMjc0NDY1fQ.dEUFI6EPfHAEYp4jnZ6PnwgGiF_AbNHa7ndnLrx5n6M
+content-type: application/json
+
+{
+    "title":"ML",
+    "description":"About ML",
+    "img":"https://google.com",
+    "ownerId":"5f74545af4ba2a17987aaf34"
+}
