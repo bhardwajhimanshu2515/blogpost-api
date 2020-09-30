@@ -102,7 +102,7 @@ const login=async(req,res)=>{
     try{
         token=jwt.sign({userId:existinguser.id,email:existinguser.email,userType:existinguser.userType},
             "myToken",
-            {expiresin:'21d'});
+            {expiresIn:'21d'});
     }catch(err){
         const error=new HttpResponse("Error in generating token",500);
         return res.status(500).json({response:error});
@@ -113,7 +113,7 @@ const login=async(req,res)=>{
         img:existinguser.img,
         name:existinguser.name,
         phoneNumber:existinguser.phoneNumber,
-        email:existinguser.phoneNumber,
+        email:existinguser.email,
         token:token
     })
 };
