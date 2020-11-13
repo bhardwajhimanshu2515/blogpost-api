@@ -66,6 +66,7 @@ const signup=async(req,res)=>{
         email:createdUser.email,
         token:token
     })
+    console.log(createdUser);
 };
 
 //create login function here
@@ -116,6 +117,7 @@ const login=async(req,res)=>{
         email:existinguser.email,
         token:token
     })
+    console.log(existinguser);
 };
 
 //export
