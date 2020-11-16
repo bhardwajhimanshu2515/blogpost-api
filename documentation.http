@@ -29,3 +29,9 @@ content-type: application/json
     "img":"https://google.com",
     "ownerId":"5f74545af4ba2a17987aaf34"
 }
+
+###
+
+GET  http://localhost:5000/api/blog/getAll
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1Zjc0NTQ1YWY0YmEyYTE3OTg3YWFmMzQiLCJlbWFpbCI6ImJoYXJkd2FqaGltYW5zaHUyNTE1QGdtYWlsLmNvbSIsImlhdCI6MTYwNTU2MTY3MiwiZXhwIjoxNjA3Mzc2MDcyfQ.iIReaORD3vMtO0H7k2Zvc1HHVhrTY0qqvBrqy2_hGXc
+content-type: application/json
