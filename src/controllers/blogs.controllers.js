@@ -46,6 +46,7 @@ const getOneBlog = async (req, res) => {
     //find one blog
     const mainUrl = url.parse(req.url, true);
     const blogId = mainUrl.query.blogId;
+    console.log("blog=",blogId);
     let fetchedBlog;
     try {
         fetchedBlog = await Blog.find({ _id: blogId.toString()});

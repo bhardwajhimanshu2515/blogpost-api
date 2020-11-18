@@ -37,6 +37,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1Zjc0N
 content-type: application/json
 
 ###
-GET http://localhost:5000/api/blog/one?blogId=5fb2f5b1fa41081e449bd7b4
+GET http://localhost:5000/api/blog/one/?blogId=5fb2f5b1fa41081e449bd7b4
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1Zjc0NTQ1YWY0YmEyYTE3OTg3YWFmMzQiLCJlbWFpbCI6ImJoYXJkd2FqaGltYW5zaHUyNTE1QGdtYWlsLmNvbSIsImlhdCI6MTYwNTY5MTM5MSwiZXhwIjoxNjA3NTA1NzkxfQ.M7XKmlv6ZM9dnZhopmiyilGEXZAnVnftazLVwwgWYm8
 content-type: application/json
