@@ -19,5 +19,8 @@ router.post("/create",blogController.createBlog);
 //define route for getting all blogs
 router.get("/getAll",blogController.getAllBlogs);
 
+//define route for one blog
+router.get("/one",blogController.getOneBlog);
+
 //export router
 module.exports=router;
