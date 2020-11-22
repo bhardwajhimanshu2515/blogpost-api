@@ -2,7 +2,7 @@
   "name": "blog-post-api",
   "version": "1.0.0",
   "description": "I am going to create a backend for Blog Post Web Application.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
