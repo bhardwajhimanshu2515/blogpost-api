@@ -30,7 +30,7 @@ app.use("/api/user",userRoute);
 app.use("/api/blog",blogRoute);
 
 //define dbURL
-const dbURL="mongodb://127.0.0.1:27017/blogDB";
+const dbURL="mongodb+srv://himanshu2515:6350515122aA@@cluster0.z31eg.mongodb.net/blogsDB?retryWrites=true&w=majority";
 
 //connect to mongoose
 mongoose
